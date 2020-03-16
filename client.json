@@ -1,0 +1,15 @@
+{
+    "Debug": true,
+    "Retries": 0,
+    "Routes": [
+        {
+            "Retries": 1,
+            "ServeNodes": [
+                "tcp://:443"
+            ],
+            "ChainNodes": [
+                "forward+wss://hkkck4.ddnsfree.com:443"
+            ]
+        }
+    ]
+}
