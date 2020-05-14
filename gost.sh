@@ -87,18 +87,18 @@ Install_ct(){
             `mv gost-linux-"$bit"-"$ct_new_ver" gost`
             `mv gost /usr/bin/gost`
             `chmod -R 777 /usr/bin/gost`
-            `wget --no-check-certificate https://www.fiisi.com/gost/gost.service && chmod -R 777 gost.service && mv gost.service /usr/lib/systemd/system`
-            `mkdir /etc/gost && wget --no-check-certificate https://www.fiisi.com/gost/config.json && mv config.json /etc/gost && chmod -R 777 /etc/gost`
+            `wget --no-check-certificate https://raw.githubusercontent.com/Textcat/gost-tunnel/master/gost.service?token=ACSY46RUS2KNWNXV3ASTW326Y2SBM && chmod -R 777 gost.service && mv gost.service /usr/lib/systemd/system`
+            `mkdir /etc/gost && wget --no-check-certificate https://raw.githubusercontent.com/Textcat/gost-tunnel/master/server.json?token=ACSY46XI3GMA6MV357STNL26Y2R6C && mv config.json /etc/gost && chmod -R 777 /etc/gost`
             `systemctl enable gost && systemctl restart gost`
             echo "------------------------------"
             if test -a /usr/bin/gost -a /usr/lib/systemctl/gost.service -a /etc/gost/config.json;then
-             echo "${Green_font_prefix}gost似乎安装成功${Font_color_suffix}"
+             echo "${Green_font_prefix}gost安装成功${Font_color_suffix}"
              `rm -rf "$(pwd)"/gost`
              `rm -rf "$(pwd)"/gost.service`
              `rm -rf "$(pwd)"/config.json`
              `rm -rf "$(pwd)"/gost.sh`
             else
-            echo "${Red_font_prefix}gost没有安装成功，可以到https://www.fiisi.com评论留言询问${Font_color_suffix}"
+            echo "${Red_font_prefix}gost没有安装成功${Font_color_suffix}"
              `rm -rf   "$(pwd)"/gost`
              `rm -rf "$(pwd)"/gost.service`
              `rm -rf "$(pwd)"/config.json`
