@@ -3,12 +3,23 @@
     "Retries": 0,
     "Routes": [
         {
-            "Retries": 1,
+            "Retries": 2,
             "ServeNodes": [
-                "tcp://:443"
+                "tcp://:11380",
+                "udp://:11380"
             ],
             "ChainNodes": [
-                "forward+wss://hkkck4.ddnsfree.com:443"
+                "forward+mtls://sig2.ddnsfree.com:443?ip=sig1.ddnsfree.com:443&strategy=round&max_fails=2&fail_timeout=600s"
+            ]
+        },
+        {
+            "Retries": 2,
+            "ServeNodes": [
+                "tcp://:11600",
+                "udp://:11600"
+            ],
+            "ChainNodes": [
+                "forward+mtls://tokyo1.ddnsfree.com:443?ip=tokyo2.ddnsgeek.com:443,tokyo3.ddnsfree.com:443,tokyo4.ddnsfree.com:443,tokyo5.ddnsfree.com:443&strategy=round&max_fails=2&fail_timeout=600s"
             ]
         }
     ]
