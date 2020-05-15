@@ -1,25 +1,25 @@
 {
     "Debug": true,
-    "Retries": 0,
+    "Retries": 1,
     "Routes": [
         {
             "Retries": 2,
             "ServeNodes": [
-                "tcp://:11380",
-                "udp://:11380"
+                "tcp://:11381",
+                "udp://:11381"
             ],
             "ChainNodes": [
-                "relay+mwss://localhost:11380?ip=sig1.ddnsfree.com:443,sig2.ddnsfree.com:443&strategy=round&max_fails=2&fail_timeout=600s"
+                "relay+mwss://localhost:11381?ip=britain1.ddnsfree.com:443,britain2.ddnsfree.com:443,britain3.ddnsfree.com:443&strategy=round&max_fails=2&fail_timeout=600s"
             ]
         },
         {
             "Retries": 2,
             "ServeNodes": [
-                "tcp://:11600",
-                "udp://:11600"
+                "tcp://:11582",
+                "udp://:11582"
             ],
             "ChainNodes": [
-                "relay+mwss://localhost:11600?ip=tokyo1.ddnsfree.com:443,tokyo2.ddnsgeek.com:443,tokyo3.ddnsfree.com:443,tokyo4.ddnsfree.com:443,tokyo5.ddnsfree.com:443&strategy=round&max_fails=2&fail_timeout=600s"
+                "relay+mwss://localhost:11582?ip=lax1.ddnsfree.com:443,lax2.ddnsfree.com:443&strategy=round&max_fails=2&fail_timeout=600s"
             ]
         }
     ]
