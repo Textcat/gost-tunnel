@@ -9,7 +9,7 @@
                 "udp://:11380"
             ],
             "ChainNodes": [
-                "forward+mtls://sig2.ddnsfree.com:443?ip=sig1.ddnsfree.com:443&strategy=round&max_fails=2&fail_timeout=600s"
+                "relay+mwss://localhost:11380?ip=sig1.ddnsfree.com:443,sig2.ddnsfree.com:443&strategy=round&max_fails=2&fail_timeout=600s"
             ]
         },
         {
@@ -19,7 +19,7 @@
                 "udp://:11600"
             ],
             "ChainNodes": [
-                "forward+mtls://tokyo1.ddnsfree.com:443?ip=tokyo2.ddnsgeek.com:443,tokyo3.ddnsfree.com:443,tokyo4.ddnsfree.com:443,tokyo5.ddnsfree.com:443&strategy=round&max_fails=2&fail_timeout=600s"
+                "relay+mwss://localhost:11600?ip=tokyo1.ddnsfree.com:443,tokyo2.ddnsgeek.com:443,tokyo3.ddnsfree.com:443,tokyo4.ddnsfree.com:443,tokyo5.ddnsfree.com:443&strategy=round&max_fails=2&fail_timeout=600s"
             ]
         }
     ]
