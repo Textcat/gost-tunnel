@@ -88,7 +88,7 @@ Install_ct(){
             `mv gost /usr/bin/gost`
             `chmod -R 777 /usr/bin/gost`
             `wget --no-check-certificate https://raw.githubusercontent.com/Textcat/gost-tunnel/master/gost.service && chmod -R 777 gost.service && mv gost.service /usr/lib/systemd/system`
-            `mkdir /etc/gost && wget --no-check-certificate https://raw.githubusercontent.com/Textcat/gost-tunnel/master/server.json && mv server.json /etc/gost && chmod -R 777 /etc/gost`
+            `mkdir /etc/gost && wget --no-check-certificate https://raw.githubusercontent.com/Textcat/gost-tunnel/master/config.json && mv config.json /etc/gost && chmod -R 777 /etc/gost`
             `systemctl enable gost && systemctl restart gost`
             echo "------------------------------"
             if test -a /usr/bin/gost -a /usr/lib/systemctl/gost.service -a /etc/gost/config.json;then
